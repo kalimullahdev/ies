@@ -1,4 +1,4 @@
-# ies
+# Instant Event Solution
 
 A new Flutter project.
 
