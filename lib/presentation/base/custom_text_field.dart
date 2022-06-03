@@ -50,7 +50,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           // labelText: labelText,
           // labelStyle: const TextStyle(color: Colors.black54),
           hintStyle: const TextStyle(
-            color: ColorResources.colorPrimary,
+            color: ColorResources.greyColor,
           ),
           border: InputBorder.none,
           prefixIcon: Padding(
