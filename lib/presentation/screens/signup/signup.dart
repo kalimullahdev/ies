@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ies/presentation/screens/signin/signin.dart';
 import 'package:ies/utill/color_resources.dart';
+import 'package:ies/utill/images.dart';
 // import 'package:fluttertoast/fluttertoast.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -43,17 +44,20 @@ class _SignupScreenState extends State<SignupScreen> {
       children: <Widget>[
         Center(
             child: Image.asset(
-          'assets/images/logo.png',
-          height: 130,
+          Images.logo,
+          height: 150,
         )),
         const SizedBox(
           height: 80,
         ),
-        const Text('Sign Up',
-            style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: ColorResources.colorPrimary)),
+        const Text(
+          'Sign Up',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: ColorResources.colorPrimary,
+          ),
+        ),
         TextFormField(
           keyboardType: TextInputType.emailAddress,
           style: const TextStyle(color: ColorResources.textColor1),

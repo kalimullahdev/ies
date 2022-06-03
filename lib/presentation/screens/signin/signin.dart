@@ -43,8 +43,8 @@ class _SigninScreenState extends State<SigninScreen> {
       children: <Widget>[
         Center(
             child: Image.asset(
-          'assets/images/logo.png',
-          height: 130,
+          "assets/images/logo.jpeg",
+          height: 150,
         )),
         const SizedBox(
           height: 80,

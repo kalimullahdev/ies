@@ -8,4 +8,23 @@ class ColorResources {
   static const Color textColor3 = Color(0xFFaaaaaa);
   static const Color whiteColor = Colors.white;
   static const Color greyColor = Colors.grey;
+
+  static const LinearGradient blueLinearGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    stops: [0.0, 1.0],
+    colors: [
+      Color(0xffFF912C),
+      Color(0xffAB6211),
+    ],
+  );
+  static const LinearGradient greenLinearGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    stops: [0.0, 1.0],
+    colors: [
+      Color(0xff26B9D1),
+      Color(0xff13C2B4),
+    ],
+  );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:ies/presentation/base/custom_rounded_button.dart';
 import 'package:ies/presentation/base/horizantal_list.dart';
 import 'package:ies/utill/dimensions.dart';
 import 'package:ies/utill/styles.dart';
@@ -29,6 +30,10 @@ class MarriageDetail extends StatelessWidget {
                 "Reacting to the National Command Operations Center’s (NCOC) announcement a week ago about the ",
                 style: defaultRegular,
               ),
+            ),
+            CustomRoundedButton(
+              buttonText: "Book now",
+              onpressed: () {},
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
