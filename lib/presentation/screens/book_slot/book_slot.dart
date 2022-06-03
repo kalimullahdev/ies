@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ies/presentation/base/card_selector_from_list.dart';
 import 'package:ies/presentation/base/custom_rounded_button.dart';
 import 'package:ies/presentation/base/custom_text_field.dart';
 import 'package:ies/utill/dimensions.dart';
@@ -108,12 +109,15 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                       hintText: 'Special Request',
                       controller: _specialRequestController,
                     ),
-                    const SizedBox(height: 22),
-                    const SizedBox(height: 10),
+                    const SizedBox(
+                      height: Dimensions.PADDING_SIZE_DEFAULT,
+                    ),
+                    const CardSelectorFromList(),
                     Center(
                       child: CustomRoundedButton(
                         buttonText: "BOOK NOW",
                         onpressed: () {
+                          Navigator.pop(context);
                           String _fullName = _fullNameController.text.trim();
                           String _email = _emailController.text.trim();
                           String _date = _dateController.text.trim();
@@ -123,7 +127,7 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                               _specialRequestController.text.trim();
                         },
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

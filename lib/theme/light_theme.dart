@@ -12,6 +12,7 @@ ThemeData lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: ColorResources.colorPrimary,
   ),
+  backgroundColor: ColorResources.appBackgroundColor,
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
       primary: Colors.black,

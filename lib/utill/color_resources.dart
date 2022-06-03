@@ -8,6 +8,7 @@ class ColorResources {
   static const Color textColor3 = Color(0xFFaaaaaa);
   static const Color whiteColor = Colors.white;
   static const Color greyColor = Colors.grey;
+  static const Color appBackgroundColor = Color(0xffFFF3E3);
 
   static const LinearGradient blueLinearGradient = LinearGradient(
     begin: Alignment.topLeft,
