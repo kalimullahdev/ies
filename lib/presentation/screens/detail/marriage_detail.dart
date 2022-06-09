@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ies/presentation/base/custom_rounded_button.dart';
 import 'package:ies/presentation/base/horizantal_list.dart';
-import 'package:ies/presentation/screens/book_slot/book_slot.dart';
+import 'package:ies/presentation/screens/book_slot/book%20_slot_form.dart';
 import 'package:ies/utill/dimensions.dart';
 import 'package:ies/utill/styles.dart';
 
@@ -37,7 +37,7 @@ class MarriageDetail extends StatelessWidget {
               onpressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BookSlotScreen(),
+                    builder: (context) => const BookSlotForm(),
                   )),
             ),
             Padding(

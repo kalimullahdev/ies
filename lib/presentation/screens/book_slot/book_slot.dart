@@ -76,7 +76,7 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                    CustomTextFieldWidget(
+                    CustomTextField(
                       hintText: '04/19/2022',
                       controller: _dateController,
                     ),
@@ -86,7 +86,7 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                    CustomTextFieldWidget(
+                    CustomTextField(
                       hintText: '9:34PM',
                       controller: _dateController,
                     ),
@@ -96,7 +96,7 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                    CustomTextFieldWidget(
+                    CustomTextField(
                       hintText: '100',
                       controller: _noOfPeopleController,
                     ),
@@ -105,7 +105,7 @@ class _BookSlotScreenState extends State<BookSlotScreen> {
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                    CustomTextFieldWidget(
+                    CustomTextField(
                       hintText: 'Special Request',
                       controller: _specialRequestController,
                     ),

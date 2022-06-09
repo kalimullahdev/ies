@@ -1,10 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:ies/utill/color_resources.dart';
 
-class CustomTextFieldWidget extends StatelessWidget {
-  const CustomTextFieldWidget({
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({
     Key? key,
-    required this.controller,
+    this.controller,
     this.hintText,
     this.enabled,
     this.prefixIconData,
@@ -14,9 +16,12 @@ class CustomTextFieldWidget extends StatelessWidget {
     this.obscureText,
     this.conformPasswordText,
     this.suffixIcon,
+    this.width,
+    this.showEnabledBorder = false,
+    this.showBorder = false,
   }) : super(key: key);
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String? hintText;
   final bool? enabled;
   final IconData? prefixIconData;
@@ -26,13 +31,14 @@ class CustomTextFieldWidget extends StatelessWidget {
   final String? textType;
   final String? conformPasswordText;
   final Widget? suffixIcon;
+  final double? width;
+  final bool showEnabledBorder;
+  final bool showBorder;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 7,
-      ),
+    return SizedBox(
+      width: width ?? 200,
       child: TextFormField(
         validator: validator,
         // controller: controller,
@@ -41,25 +47,80 @@ class CustomTextFieldWidget extends StatelessWidget {
         obscureText: obscureText ?? false,
         cursorColor: const Color(0xff5C58FF),
         style: const TextStyle(
-          color: Color(0xff051D3F),
+          color: ColorResources.greyLightColor,
         ),
         autovalidateMode: AutovalidateMode.onUserInteraction,
+
         decoration: InputDecoration(
-          hintText: hintText,
-          suffixIcon: suffixIcon,
-          // labelText: labelText,
-          // labelStyle: const TextStyle(color: Colors.black54),
+          border: showBorder
+              ? const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                    // width: 5.0,
+                  ),
+                )
+              : InputBorder.none,
+          enabledBorder: showEnabledBorder
+              ? const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  borderSide: BorderSide(
+                    color: Colors.blue,
+                    // width: 5.0,
+                  ),
+                )
+              : InputBorder.none,
           hintStyle: const TextStyle(
             color: ColorResources.greyColor,
           ),
-          border: InputBorder.none,
-          prefixIcon: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Icon(
-              prefixIconData,
-              color: const Color(0xffA1AFC3),
+          hintText: hintText,
+          suffixIcon: suffixIcon,
+          prefixIcon: Icon(
+            prefixIconData,
+            size: 17,
+            color: ColorResources.greyColor,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomTextField2 extends StatelessWidget {
+  const CustomTextField2({
+    Key? key,
+    this.hintText,
+    this.keyboardType,
+  }) : super(key: key);
+  final String? hintText;
+  final TextInputType? keyboardType;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 300,
+      child: TextField(
+        keyboardType: keyboardType,
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            borderSide: BorderSide(
+              color: Colors.blue,
+              // width: 5.0,
             ),
           ),
+          enabledBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            borderSide: BorderSide(
+              color: Colors.blue,
+              // width: 5.0,
+            ),
+          ),
+          hintStyle: const TextStyle(
+            color: ColorResources.greyColor,
+          ),
+          hintText: hintText,
         ),
       ),
     );

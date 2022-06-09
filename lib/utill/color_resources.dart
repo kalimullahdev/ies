@@ -9,6 +9,7 @@ class ColorResources {
   static const Color whiteColor = Colors.white;
   static const Color greyColor = Colors.grey;
   static const Color appBackgroundColor = Color(0xffFFF3E3);
+  static const Color greyLightColor = Color.fromARGB(255, 175, 175, 175);
 
   static const LinearGradient blueLinearGradient = LinearGradient(
     begin: Alignment.topLeft,
