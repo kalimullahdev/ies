@@ -67,9 +67,87 @@ class MarriageDetail extends StatelessWidget {
             ),
             const SizedBox(
               width: 600,
-              height: 800,
+              height: 200,
               child: HorizantalList(),
             ),
+            const ListTile(
+              title: Text(
+                "Commenst (56)",
+                style: defaultBold,
+              ),
+            ),
+            ListView(
+              shrinkWrap: true,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              children: const [
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    maxRadius: 18,
+                  ),
+                  title: Text("Anita Michale"),
+                  subtitle: Text(
+                    "The food was good alway remmand this food",
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: Dimensions.PADDING_SIZE_EXTRA_LARGE),
+            const SizedBox(height: Dimensions.PADDING_SIZE_EXTRA_LARGE),
+            const SizedBox(height: Dimensions.PADDING_SIZE_EXTRA_LARGE),
           ],
         ),
       ),
