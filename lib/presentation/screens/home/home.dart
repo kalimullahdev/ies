@@ -3,6 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ies/presentation/screens/detail/marriage_detail.dart';
 import 'package:ies/utill/color_resources.dart';
 import 'package:ies/utill/dimensions.dart';
+import 'package:ies/utill/styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -83,79 +84,78 @@ class MarriageWidget extends StatelessWidget {
               marriageId: imgSrc,
             ),
           )),
-      child: Card(
-        child: Container(
-          width: 400,
-          height: 200,
-          decoration: BoxDecoration(
-            color: Colors.black26,
-            image: DecorationImage(
-              colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.5),
-                BlendMode.darken,
-              ),
-              image: NetworkImage(imgSrc),
-              fit: BoxFit.cover,
+      child: Container(
+        width: 400,
+        height: 200,
+        margin: const EdgeInsets.all(Dimensions.PADDING_SIZE_EXTRA_SMALL),
+        decoration: Styles.boxDecorationWithShadow.copyWith(
+          color: Colors.black26,
+          image: DecorationImage(
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.5),
+              BlendMode.darken,
             ),
+            image: NetworkImage(imgSrc),
+            fit: BoxFit.cover,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  marriageTitle,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                  ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                marriageTitle,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: Dimensions.FONT_SIZE_DEFAULT,
                 ),
-                const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RatingBar.builder(
-                      initialRating: 3,
-                      unratedColor: ColorResources.whiteColor,
-                      minRating: 1,
-                      direction: Axis.horizontal,
-                      allowHalfRating: true,
-                      itemSize: 20,
-                      itemCount: 5,
-                      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                      itemBuilder: (context, _) => const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      onRatingUpdate: (rating) {
-                        print(rating);
-                      },
+              ),
+              const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  RatingBar.builder(
+                    initialRating: 3,
+                    unratedColor: ColorResources.whiteColor,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemSize: 20,
+                    itemCount: 5,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Colors.amber,
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Text(
-                          "Avaliable slots",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                          ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Text(
+                        "Avaliable slots",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: Dimensions.FONT_SIZE_DEFAULT,
                         ),
-                        SizedBox(
-                          width: Dimensions.PADDING_SIZE_DEFAULT,
-                        ),
-                        CircleAvatar(
-                          backgroundColor: Colors.green,
-                          maxRadius: 6,
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
-              ],
-            ),
+                      ),
+                      SizedBox(
+                        width: Dimensions.PADDING_SIZE_DEFAULT,
+                      ),
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        maxRadius: 6,
+                      )
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+            ],
           ),
         ),
       ),
