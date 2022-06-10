@@ -12,11 +12,6 @@ class BookSlotScreen extends StatefulWidget {
 }
 
 class _BookSlotScreenState extends State<BookSlotScreen> {
-  final FocusNode _fullNameFocus = FocusNode();
-  final FocusNode _emailFocus = FocusNode();
-  final FocusNode _dateFocus = FocusNode();
-  final FocusNode _noOfPeopleFocus = FocusNode();
-  final FocusNode _specialRequestFocus = FocusNode();
   final TextEditingController _fullNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _specialRequestController =

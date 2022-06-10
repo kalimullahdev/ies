@@ -41,6 +41,7 @@ dependencies:
   cached_network_image: ^3.2.0
   introduction_screen: ^3.0.2
   flutter_dropdown: ^1.0.0+hotfix.1
+  item_selector: ^0.2.0
   # fluttertoast: ^8.0.9
 
 dev_dependencies:
